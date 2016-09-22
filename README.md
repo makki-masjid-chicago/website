@@ -1,2 +1,2 @@
-# website
+# Webstie
 Makki Masjid Chicago Website
