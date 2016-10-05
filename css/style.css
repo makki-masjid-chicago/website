@@ -11,6 +11,8 @@ html {
 
 /*--- Custom Nav-Bar CSS ---*/
 
+
+
 .navbar-custom {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
@@ -114,6 +116,7 @@ html {
     .navbar-item{
         font-size: 23px;
     }
+
 }
 
 @media screen 
@@ -126,6 +129,9 @@ html {
       .navbar-custom .navbar-brand{
           font-size: 23px;
       }
+      h1{
+          font-size: 12px;
+      }
 }
 
 @media(min-width: 1600px) {
@@ -137,11 +143,6 @@ html {
     }
 }
 
-@media(min-wdith: 769px){
-    .navbar-item{
-        font-size: 12px;
-    }
-}
 
 @media(min-width: 768px) {
     .navbar-custom {
@@ -170,46 +171,14 @@ html {
     }
 }
 
-@media(max-width: 990px){
+@media(mix-width: 990px){
+    
     .pdf-text{
         display: none;
     }
 }
 
 
-
-
-/* iPads and other tablets */
-
-@media only screen 
-and (max-device-width : 768px) 
-and (orientation : portrait) {
-    
-.navbar-custom {
-        padding: 0;
-        border-bottom: 1px solid rgba(255,255,255,.3);
-        background: #000;
-        color:#FFF;
-    }
-    
-    .navbar-item {
-        font-size: 16px;   
-    }
-    
-    .navbar-custom .navbar-brand {
-        font-weight: 700;
-        font-size: 18px;
-        letter-spacing: 1;
-    }
-    
-    .pdf-btn{
-        font-size: 12px;
-    }
-    
-    .pdf-text{
-        display: unset;
-    }
-}
 
 
 /* Devices smaller than iPad mini*/
@@ -255,11 +224,11 @@ and (orientation : portrait) {
 /*--- General CSS ---*/
 
 .main-container {
-    padding-top: 65px;
+    padding-top: 110px;
 }
 
 h1 {
-    font-size: 45px;
+    font-size: 30px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     letter-spacing: -1px;
@@ -398,7 +367,6 @@ td{
 }
 
 
-
 /* iPads (landscape) ----------- */
 @media only screen 
 and (min-device-width : 768px) 
@@ -406,6 +374,10 @@ and (max-device-width : 1024px)
 and (orientation : landscape) {
     .lead{
         font-size:14px;
+    }
+    
+    h1{
+        font-size: 25px;
     }
     
     h2{
@@ -419,6 +391,7 @@ and (orientation : landscape) {
     h5{
         font-size: 11px;
     }
+
 }
 
 /* iPads (portrait) ----------- */
@@ -426,12 +399,13 @@ and (orientation : landscape) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : portrait) {
-    .main-container{
-        padding-top:40px;
-    }
+
     
     .lead{
         font-size:12px;
+    }
+    h1{
+        font-size: 30px;
     }
     
     h2{
@@ -470,14 +444,17 @@ and (orientation : portrait) {
     .well-sm{
         padding: 6px 6px 6px 6px;
     }
+
 }
 
 
 @media(max-width:767px) {
     .main-container{
-        padding-top: 42px;
+        padding-top: 33px;
     }
-    
+    h1{
+        font-size: 25px;
+    }
     .alert-info{
         font-size: 14px;
         margin-left: 2px;
