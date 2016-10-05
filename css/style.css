@@ -134,9 +134,7 @@ html {
       .navbar-custom .navbar-brand{
           font-size: 23px;
       }
-      h1{
-          font-size: 12px;
-      }
+      
       pdf-text{
           display: unset;
       }
@@ -149,10 +147,14 @@ html {
     .navbar-custom .navbar-brand{
         font-size: 25px;
     }
+    h5{
+        font-size: 14px;
+    }
 }
 
 
-@media(min-width: 768px) {
+@media(min-width: 768px)
+{
     .navbar-custom {
         padding: 20px 0;
         border-bottom: 1px;
@@ -174,21 +176,20 @@ html {
         color:#FFF;
     }
 
-     .lead{
+    .lead{
         font-size:12px;
     }
     h1{
         font-size: 30px;
     }
-    
     h2{
         font-size: 20px;
     }
+    h5{
+        font-size: 11px;
+    }
     .subtitle{
         font-size: 14px;
-    }
-    h5{
-        font-size: 9px;
     }
     .pdf-text{
         display: none;
@@ -435,6 +436,11 @@ td{
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : landscape) {
+    
+    .main-container{
+        padding-top: 90px;
+    }
+    
     .lead{
         font-size:14px;
     }
@@ -463,6 +469,16 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) 
 and (orientation : portrait) {
 
+    .navbar-custom {
+        padding: 0;
+        border-bottom: 1px solid rgba(255,255,255,.3);
+        background: #000;
+        color:#fff;
+    }
+    
+    .main-container{
+        padding-top: 52px;
+    }
     
     .lead{
         font-size:12px;
