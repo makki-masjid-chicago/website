@@ -61,23 +61,26 @@
                             <a class="page-scroll navbar-item" href="news.html">News</a>
                         </li>
                         <li>
-                            <a class="page-scroll navbar-item" href="#projects">Events</a>
+                            <a class="page-scroll navbar-item" href="events.html">Events</a>
                         </li>
                         <li>
-                            <a class="page-scroll navbar-item" href="#education">Daily School</a>
+                            <a class="page-scroll navbar-item" href="school.html">School</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll navbar-item" href="donate.html">Donate</a>
                         </li>
                     </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <button type="button" id="pdf_btn" class="btn btn-default btn-md navbar-btn pdf-btn"><span class="glyphicon glyphicon-print"></span>
-                        <a href="http://www.makkimasjid.com/pdf/current.pdf" target="_blank"><!--<script>
+                        <button type="button" id="pdf_btn" class="btn btn-default btn-md navbar-btn pdf-btn" onclick="window.open('http://makkimasjid.com/pdf/current.pdf');"><img src="https://maxcdn.icons8.com/iOS7/PNG/25/Time_And_Date/timetable_filled-25.png" title="Timetable Filled" class="img-responsive" style="float:left"> &nbsp;
+                        <span class="pdf-text"><!--<script>
                             var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];;
                             var x = new Date();
                             var month  = months[x.getMonth()];
                             document.write(month);
                         </script>-->
                          Timetable
-                        </a>
+                        </span>
                         </button>
                         
                     </li>
@@ -88,10 +91,10 @@
             <!-- /.container -->
         </nav>
 
-       
         <!-- Main Content -->
         
     <section id="main" class="main-container">
+    <div style="text-align: center"><h3>بسم الله الرحمن الرحيم </h3></div>
     <script src="js/jssor.slider-21.1.6.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         jssor_1_slider_init = function() {
@@ -222,14 +225,70 @@
     <script type="text/javascript">jssor_1_slider_init();</script>
     <!-- #endregion Jssor Slider End -->
            <br>
-            <div class="container">
-              <div class="alert alert-info fade in">
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+        <div id="sticky-anchor"></div>      
+       <div class="well well-sm daily-time-sidebar" id="prayer-sidebar">
+                            <div class="well-content">
+                                <h2 class="well-title daily-time-title">
+                                    <script>
+                                        var today = new Date();
+                                        var dd = today.getDate();
+                                        var yyyy = today.getFullYear();
+                                        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+                                        var weekdays =['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+                                        var month  = months[today.getMonth()];
+                                        var weekday = weekdays[today.getDay()];
+                                        var title = weekday + ", " + month + " " + dd + ", " + yyyy;
+                                        document.write(title);
+                                    </script>
+                                </h2>
+                                <h3 class="subtitle daily-time-title">IDate</h3>
+                              <table class="table table-striped">
+                                <thead>
+                                  <tr>
+                                    <th></th>
+                                    <th>Time</th>
+                                    <th>Iqamah</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Fajr</td>
+                                    <td>5:55 <span class="am-pm-label">AM</span></td>
+                                    <td>5:55 <span class="am-pm-label">AM</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Zuhr</td>
+                                    <td>12:00 <span class="am-pm-label">AM</span></td>
+                                    <td>1:00 <span class="am-pm-label">PM</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Asr</td>
+                                    <td>5:55 <span class="am-pm-label">PM</span></td>
+                                    <td>5:55 <span class="am-pm-label">PM</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Maghrib</td>
+                                    <td>8:55 <span class="am-pm-label">PM</span></td>
+                                    <td>8:55 <span class="am-pm-label">PM</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Isha</td>
+                                    <td>10:00 <span class="am-pm-label">PM</span></td>
+                                    <td>10:00 <span class="am-pm-label">PM</span></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                                <div class="jummah-label daily-time-title">Al-Jummu'ah: 1:30 <span class="am-pm-label">PM</span></div>
+                                <div class="sun-label daily-time-title">Sunrise: 5:55 <span class="am-pm-label">AM</span>&nbsp;&nbsp;Sunset: 5:55 <span class="am-pm-label">PM</span></div>
+                            </div>
             </div>
-               <div class="row">
-                <div class="col-sm-12">
-                   <div class="col-sm-4">
+                <div class="container">
+                        <div class="row">
+                        <div class="alert alert-info fade in">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>October Timetable is Available <a href="http://www.makkimasjid.com/pdf/current.pdf">here</a>.</strong>
+                        </div>
+                        <div class="col-sm-3">
                        <div class="well well-sm">
                           <div class="well-content">
                                 <h2 class="well-title">Makki Masjid</h2>
@@ -241,7 +300,18 @@
                        </div>
                    </div>
                    
-                   <div class="col-sm-4">
+                   <div class="col-sm-3">
+                       <div class="well well-sm">
+                           <div class="well-content">
+                                <h2 class="well-title">Makki Masjid News and Events</h2>
+                                <h3 class="subtitle">October 12, 2016</h3>
+                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas tortor lacus, facilisis consectetur mauris tristique eget. Aliquam rhoncus ex ipsum, eu imperdiet libero feugiat.
+                                </p>
+                                <a href="news.html" style="float: right;">More &nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+                           </div>
+                       </div>
+                   </div>
+                     <div class="col-sm-3">
                        <div class="well well-sm">
                            <div class="well-content">
                                 <h2 class="well-title">Makki Masjid News and Events</h2>
@@ -253,25 +323,82 @@
                        </div>
                    </div>
                    
-                   <div class="col-sm-4">
+                    <div class="col-sm-3">
                        <div class="well well-sm">
                            <div class="well-content">
-                                <h2 class="well-title">Makki Masjid</h2>
-                                <h3 class="subtitle">November 21, 2016</h3>
-                                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas tortor lacus, facilisis consectetur mauris tristique eget. Aliquam rhoncus ex ipsum, eu imperdiet libero feugiat.
+                                <h2 class="well-title">Makki Masjid News and Events</h2>
+                                <h3 class="subtitle">October 12, 2016</h3>
+                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas tortor lacus, facilisis consectetur mauris tristique eget. Aliquam rhoncus ex ipsum, eu imperdiet libero feugiat.
                                 </p>
                                 <a href="news.html" style="float: right;">More &nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
                            </div>
                        </div>
-                       <a href="news.html" style="float: right;">View News &nbsp;<span class="glyphicon glyphicon-arrow-right"></span></a>
                    </div>
                 </div>
-            </div>
         </div>
-        
-        <div class="container" style="padding-top:25px;">
-            <div class="col-sm-12">
-                <div class="well well-md">
+            <hr>
+            <div class="container">
+              <div class="row">
+                <div class="about col-sm-12">
+                    <div class="well well-sm daily-time-sidebar-small hide">
+                            <div class="well-content">
+                                <h2 class="well-title daily-time-title">
+                                    <script>
+                                        var today = new Date();
+                                        var dd = today.getDate();
+                                        var yyyy = today.getFullYear();
+                                        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+                                        var weekdays =['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+                                        var month  = months[today.getMonth()];
+                                        var weekday = weekdays[today.getDay()];
+                                        var title = weekday + ", " + month + " " + dd + ", " + yyyy;
+                                        document.write(title);
+                                    </script>
+                                </h2>
+                                <h3 class="subtitle daily-time-title">IDate</h3>
+                              <table class="table table-striped">
+                                <thead>
+                                  <tr>
+                                    <th></th>
+                                    <th>Time</th>
+                                    <th>Iqamah</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Fajr</td>
+                                    <td>5:55 <span class="am-pm-label">AM</span></td>
+                                    <td>5:55 <span class="am-pm-label">AM</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Zuhr</td>
+                                    <td>12:00 <span class="am-pm-label">AM</span></td>
+                                    <td>1:00 <span class="am-pm-label">PM</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Asr</td>
+                                    <td>5:55 <span class="am-pm-label">PM</span></td>
+                                    <td>5:55 <span class="am-pm-label">PM</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Maghrib</td>
+                                    <td>8:55 <span class="am-pm-label">PM</span></td>
+                                    <td>8:55 <span class="am-pm-label">PM</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Isha</td>
+                                    <td>10:00 <span class="am-pm-label">PM</span></td>
+                                    <td>10:00 <span class="am-pm-label">PM</span></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                                <div class="jummah-label daily-time-title">Al-Jummu'ah: 1:30 <span class="am-pm-label">PM</span></div>
+                                <div class="sun-label daily-time-title">Sunrise: 5:55 <span class="am-pm-label">AM</span>&nbsp;&nbsp;Sunset: 5:55 <span class="am-pm-label">PM</span></div>
+                            </div>
+                    </div>
+                
+                
+                <div class="about2 well well-md">
                     <div class="well-content">
                         <h2 class="well-title">Makki Masjid About</h2>
                         <p class="lead">
@@ -280,29 +407,55 @@
                         <p class="lead">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada diam enim, quis tincidunt ante faucibus sit amet. Nunc consequat ut enim et semper. Ut nibh odio, vehicula malesuada ullamcorper et, iaculis nec ipsum. Integer a turpis a odio egestas tempor eu ac urna. Vivamus quis dapibus sapien, et placerat orci. Nullam est elit, suscipit ac ultricies sit amet, facilisis eget nibh. Nulla lacinia enim justo, nec ultrices erat tempus a. Duis in egestas justo. Mauris ac lacus quis lectus condimentum pharetra euismod nec neque. Nullam tristique arcu purus, ornare fringilla velit viverra id. Morbi suscipit laoreet tortor et imperdiet. Maecenas eget quam fringilla elit tincidunt placerat nec ac mauris. Vivamus mattis massa quis viverra commodo. Aliquam cursus vulputate hendrerit. Maecenas ac mattis nulla.
                         </p>
-                        <p class="lead">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada diam enim, quis tincidunt ante faucibus sit amet. Nunc consequat ut enim et semper. Ut nibh odio, vehicula malesuada ullamcorper et, iaculis nec ipsum. Integer a turpis a odio egestas tempor eu ac urna. Vivamus quis dapibus sapien, et placerat orci. Nullam est elit, suscipit ac ultricies sit amet, facilisis eget nibh. Nulla lacinia enim justo, nec ultrices erat tempus a. Duis in egestas justo. Mauris ac lacus quis lectus condimentum pharetra euismod nec neque. Nullam tristique arcu purus, ornare fringilla velit viverra id. Morbi suscipit laoreet tortor et imperdiet. Maecenas eget quam fringilla elit tincidunt placerat nec ac mauris. Vivamus mattis massa quis viverra commodo. Aliquam cursus vulputate hendrerit. Maecenas ac mattis nulla.
-                        </p>
-                        <p class="lead">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada diam enim, quis tincidunt ante faucibus sit amet. Nunc consequat ut enim et semper. Ut nibh odio, vehicula malesuada ullamcorper et, iaculis nec ipsum. Integer a turpis a odio egestas tempor eu ac urna. Vivamus quis dapibus sapien, et placerat orci. Nullam est elit, suscipit ac ultricies sit amet, facilisis eget nibh. Nulla lacinia enim justo, nec ultrices erat tempus a. Duis in egestas justo. Mauris ac lacus quis lectus condimentum pharetra euismod nec neque. Nullam tristique arcu purus, ornare fringilla velit viverra id. Morbi suscipit laoreet tortor et imperdiet. Maecenas eget quam fringilla elit tincidunt placerat nec ac mauris. Vivamus mattis massa quis viverra commodo. Aliquam cursus vulputate hendrerit. Maecenas ac mattis nulla.
-                        </p>
-                        <p class="lead">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada diam enim, quis tincidunt ante faucibus sit amet. Nunc consequat ut enim et semper. Ut nibh odio, vehicula malesuada ullamcorper et, iaculis nec ipsum. Integer a turpis a odio egestas tempor eu ac urna. Vivamus quis dapibus sapien, et placerat orci. Nullam est elit, suscipit ac ultricies sit amet, facilisis eget nibh. Nulla lacinia enim justo, nec ultrices erat tempus a. Duis in egestas justo. Mauris ac lacus quis lectus condimentum pharetra euismod nec neque. Nullam tristique arcu purus, ornare fringilla velit viverra id. Morbi suscipit laoreet tortor et imperdiet. Maecenas eget quam fringilla elit tincidunt placerat nec ac mauris. Vivamus mattis massa quis viverra commodo. Aliquam cursus vulputate hendrerit. Maecenas ac mattis nulla.
-                        </p>
-                        <p class="lead">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada diam enim, quis tincidunt ante faucibus sit amet. Nunc consequat ut enim et semper. Ut nibh odio, vehicula malesuada ullamcorper et, iaculis nec ipsum. Integer a turpis a odio egestas tempor eu ac urna. Vivamus quis dapibus sapien, et placerat orci. Nullam est elit, suscipit ac ultricies sit amet, facilisis eget nibh. Nulla lacinia enim justo, nec ultrices erat tempus a. Duis in egestas justo. Mauris ac lacus quis lectus condimentum pharetra euismod nec neque. Nullam tristique arcu purus, ornare fringilla velit viverra id. Morbi suscipit laoreet tortor et imperdiet. Maecenas eget quam fringilla elit tincidunt placerat nec ac mauris. Vivamus mattis massa quis viverra commodo. Aliquam cursus vulputate hendrerit. Maecenas ac mattis nulla.
-                        </p>
-                        <p class="lead">
+                         <p class="lead">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada diam enim, quis tincidunt ante faucibus sit amet. Nunc consequat ut enim et semper. Ut nibh odio, vehicula malesuada ullamcorper et, iaculis nec ipsum. Integer a turpis a odio egestas tempor eu ac urna. Vivamus quis dapibus sapien, et placerat orci. Nullam est elit, suscipit ac ultricies sit amet, facilisis eget nibh. Nulla lacinia enim justo, nec ultrices erat tempus a. Duis in egestas justo. Mauris ac lacus quis lectus condimentum pharetra euismod nec neque. Nullam tristique arcu purus, ornare fringilla velit viverra id. Morbi suscipit laoreet tortor et imperdiet. Maecenas eget quam fringilla elit tincidunt placerat nec ac mauris. Vivamus mattis massa quis viverra commodo. Aliquam cursus vulputate hendrerit. Maecenas ac mattis nulla.
                         </p>
                     </div>
                 </div>
-            </div>
+            </div>            
         </div>
-        
+        </div>
     </section>
+
         
         <!-- Footer -->
+        <div id="footer">
+             <div class="col-sm-12 footer-color">
+              <div class="footer-container">
+                <div class="row">
+                   <div class="col-sm-2">
+                       <h5>3418 W. Ainslie St.</h5>
+                   </div>
+                   
+                    <div class="col-sm-2">
+                       <h5>Chicago, Illinois 60625</h5>
+                   </div>
+                   
+                   
+                   <div class="col-sm-2">
+                       <h5>+1 (773) - 588 - 8865</h5>
+                   </div>
+  
+                    <div class="col-sm-2">
+                       <h5 class="footer-long">makkimasjid@yahoo.com</h5>
+                   </div>
+                   
+                   <div class="col-sm-2">
+                       <h5>Last Updated:
+                            <script type="text/javascript">
+                                var x = new Date(document.lastModified).toString().split(" ").slice(1, 4).join(" ");
+                                document.write(x);
+                            </script>
+                        </h5>
+                   </div>
+                   
+                   <div class="col-sm-2">
+                       <h5>&copy; 2016</h5>
+                   </div>  
+              </div>
+            </div>
+            </div>
+        </div>
 
         
         <!-- Custom JS/jQuery -->
@@ -321,7 +474,88 @@
                 }
             });
         </script>
-       
+        <script>
+           function sticky_relocate() {
+            var window_top = $(window).scrollTop();
+            var footer_top = $("#footer").offset().top;
+            var div_top = $('#sticky-anchor').offset().top;
+            var div_height = $("#prayer-sidebar").height();
+
+            var padding = 0;  // tweak here or get from margins etc
+
+            if (window_top + div_height > footer_top - padding)
+                $('#prayer-sidebar').css({top: (window_top + div_height - footer_top + padding) * -1})
+            else if (window_top >= div_top-50) {
+                $('#prayer-sidebar').addClass('stick');
+                $('#prayer-sidebar').css({top: 60})
+            } else {
+                $('#prayer-sidebar').removeClass('stick');
+            }
+        }
+
+        $(function () {
+            $(window).scroll(sticky_relocate);
+            sticky_relocate();
+        });
+            
+        var prevWidth = 0;
+            
+            jQuery(window).resize(function() {
+                var windowsize = $(window).innerWidth();
+                //console.log(prevWidth);
+                
+                if(prevWidth < 1900){
+                    if(windowsize < 1900){
+                        
+                    }
+                    else{
+                      $(".about").addClass("col-sm-12");
+                      $(".daily-time-sidebar-small").addClass("hide");     
+                      $(".daily-time-sidebar-small").unwrap();
+                      $(".about2").unwrap();
+                      $(".prayer-sidebar").removeClass("hide");
+                      $(".daily-time-sidebar").removeClass("hide");
+                    }
+                }
+                else{
+                    if(windowsize < 1900){
+                      $(".about").removeClass("col-sm-12");
+                      $(".daily-time-sidebar-small").removeClass("hide");     
+                      $(".daily-time-sidebar-small").wrap("<div class='col-sm-4'></div>");
+                      $(".about2").wrap("<div class='col-sm-8'></div>");
+                      $(".prayer-sidebar").addClass("hide");
+                      $(".daily-time-sidebar").addClass("hide");
+                    }
+                    else{
+                        
+                    }
+                }
+                
+                prevWidth = windowsize;
+            });
+            
+        jQuery(document).ready(function($) {
+                var windowsize = $(window).innerWidth();
+                prevWidth = $(window).innerWidth();
+                if (windowsize < 1900){
+                  $(".about").removeClass("col-sm-12");
+                  $(".daily-time-sidebar-small").removeClass("hide");     
+                  $(".daily-time-sidebar-small").wrap("<div class='col-sm-4'></div>");
+                  $(".about2").wrap("<div class='col-sm-8'></div>");
+                  $(".prayer-sidebar").addClass("hide");
+                  $(".daily-time-sidebar").addClass("hide");
+                } 
+                else {
+                  $(".about").addClass("col-sm-12");
+                  $(".daily-time-sidebar-small").addClass("hide");     
+                  $(".daily-time-sidebar-small").unwrap();
+                  $(".about2").unwrap();
+                  $(".prayer-sidebar").removeClass("hide");
+                  $(".daily-time-sidebar").removeClass("hide");
+                }
+            });
+            
+        </script>
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         
