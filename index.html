@@ -69,7 +69,7 @@
                             <a class="page-scroll navbar-item" href="school.html">School</a>
                         </li>
                         <li>
-                            <a class="page-scroll navbar-item" href="donate.html">Donate</a>
+                            <a class="page-scroll navbar-donate navbar-item" href="donate.html">Donate</a>
                         </li>
                     </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -284,7 +284,7 @@
                                 <div class="sun-label daily-time-title">Sunrise: 5:55 <span class="am-pm-label">AM</span>&nbsp;&nbsp;Sunset: 5:55 <span class="am-pm-label">PM</span></div>
                             </div>
             </div>
-                <div class="container">
+                <div class="news1 container">
                         <div class="row">
                         <div class="alert alert-info fade in">
                             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -339,7 +339,7 @@
                 </div>
         </div>
             
-            <div class="container">
+            <div class="about1 container">
               <div class="row">
                 <div class="about col-sm-12">
                     <div class="well well-sm daily-time-sidebar-small hide">
@@ -534,11 +534,38 @@
                     }
                 }
                 
+                
+                if(800<prevWidth && prevWidth<992){
+                    if(800<windowsize && windowsize<992){
+                        
+                    }
+                    else{
+                        $(".about1").addClass("container");
+                        $(".about1").removeClass("container-fluid");
+                        $(".news1").addClass("container");
+                        $(".news1").removeClass("container-fluid");
+                    }
+                }
+                else{
+                    if(800<windowsize && windowsize<992){
+                       $(".about1").removeClass("container");
+                       $(".about1").addClass("container-fluid");
+                       $(".news1").removeClass("container");
+                       $(".news1").addClass("container-fluid");
+                    }
+                    else{
+                        
+                    }
+                }
+                            
                 prevWidth = windowsize;
             });
             
+            
+            
         jQuery(document).ready(function($) {
                 var windowsize = $(window).innerWidth();
+                console.log(windowsize);
                 prevWidth = $(window).innerWidth();
                 if (windowsize < 1900){
                   $(".about").removeClass("col-sm-12");
@@ -556,6 +583,20 @@
                   $(".prayer-sidebar").removeClass("hide");
                   $(".daily-time-sidebar").removeClass("hide");
                 }
+            
+                if (800<windowsize && windowsize<992){
+                   $(".about1").removeClass("container");
+                   $(".about1").addClass("container-fluid");
+                   $(".news1").removeClass("container");
+                   $(".news1").addClass("container-fluid");
+                }
+                else{
+                   $(".about1").addClass("container");
+                   $(".about1").removeClass("container-fluid");
+                   $(".news1").addClass("container");
+                   $(".news1").removeClass("container-fluid");
+                }
+                
             });
             
         </script>

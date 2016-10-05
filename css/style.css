@@ -89,6 +89,11 @@ html {
     letter-spacing: 1px;
 }
 
+.navbar-donate {
+    border-radius: 3px;
+    background-color: #FF9F5B;
+}
+
 .pdf-btn {
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
@@ -132,11 +137,14 @@ html {
       h1{
           font-size: 12px;
       }
+      pdf-text{
+          display: unset;
+      }
 }
 
 @media(min-width: 1600px) {
     .navbar-item{
-        font-size: 23px;
+        font-size: 20px;
     }
     .navbar-custom .navbar-brand{
         font-size: 25px;
@@ -165,20 +173,64 @@ html {
         background: #000;
         color:#FFF;
     }
-    
-    .lead{
-        font-size: 13px;
+
+     .lead{
+        font-size:12px;
     }
+    h1{
+        font-size: 30px;
+    }
+    
+    h2{
+        font-size: 20px;
+    }
+    .subtitle{
+        font-size: 14px;
+    }
+    h5{
+        font-size: 9px;
+    }
+    .pdf-text{
+        display: none;
+    }
+    
+    .col-sm-3{
+        padding-right: 5px;
+        padding-left: 5px;
+    }    
+
+    .col-sm-2{
+        padding-right: 3px;
+        padding-left: 3px;
+    }
+
+    .col-sm-4{
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .col-sm-8{
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    
+    .well-sm{
+        padding: 6px 6px 6px 6px;
+    }
+
 }
 
-@media(mix-width: 990px){
-    
+@media(max-width: 991px){
     .pdf-text{
         display: none;
     }
 }
 
-
+@media(min-width: 992px){
+    .pdf-text{
+        display: unset;
+    }
+}
 
 
 /* Devices smaller than iPad mini*/
@@ -211,10 +263,21 @@ html {
     .pdf-text{
         display: unset;
     }
+    
+    .navbar-custom .navbar-brand{
+        font-size: 18px;
+    }  
 }
 
 
-
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) { 
+    
+    .navbar-custom .navbar-brand{
+        font-size: 18px;
+    }    
+}
 
 
 /*-------------------------*/
@@ -450,7 +513,7 @@ and (orientation : portrait) {
 
 @media(max-width:767px) {
     .main-container{
-        padding-top: 33px;
+        padding-top: 51px;
     }
     h1{
         font-size: 25px;
